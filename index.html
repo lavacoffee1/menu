@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lava Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+html{
+scroll-behavior: smooth;
+}
+    :root {
+      --bg-color: #fff3e7; /* لون بيج هادئ */
+      --accent: #c5a86f;   /* ذهبي */
+      --text: #3d2b1f;     /* بني غامق */
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Tajawal', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    .wrapper {
+      max-width: 600px; /* العرض المثالي للموبايل */
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+.wrapper div {
+    padding-top: 50px;
+}
+
+    .logo img {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    /* أزرار التنقل السريع */
+    .menu-nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      position: sticky;
+      top: 15px;
+      z-index: 1000;
+       }
+
+    .nav-btn {
+      background: #fff3e7;
+      color: #c5a86d;
+
+      padding: 10px 15px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      transition: 0.3s;
+      flex: 1;
+    }
+
+    .nav-btn:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    /* أقسام المنيو */
+    .section-title {
+      font-size: 20px;
+      margin: 40px 0 20px;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .section-title::before, .section-title::after {
+      content: "";
+      height: 1px;
+      background: var(--accent);
+      flex: 1;
+      opacity: 0.3;
+    }
+
+    /* عرض الصور بشكل مفتوح */
+    .menu-page {
+      width: 100%;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+
+      display: block; /* لضمان عدم وجود مسافات غريبة */
+    }
+
+    .menu-page img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      display: block;
+    }
+
+    footer {
+      padding: 40px 0;
+      opacity: 0.5;
+      font-size: 12px;
+    }
+
+    .social-icons {
+      margin-bottom: 15px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+.social-container {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.social-title {
+    font-size: 14px;
+    color: #c5a86f;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.social-flex {
+    display: flex;
+filter: sepia(1);
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-item {
+    width: 55px; /* حجم الدائرة */
+    height: 55px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+    overflow: hidden; /* لضمان عدم خروج الصورة عن الدائرة */
+}
+
+.social-item img {
+    width: 60%; /* حجم الصورة داخل الدائرة */
+    height: 60%;
+    object-fit: contain; /* يحافظ على أبعاد الصورة بدون تمطيط */
+}
+
+/* تأثير عند الضغط أو التمرير */
+.social-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(197, 168, 111, 0.3);
+}
+
+.social-item:active {
+    transform: scale(0.9);
+}
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="logo">
+      <img src="logo.png" alt="Lava Coffee">
+    </div>
+
+    <nav class="menu-nav">
+      <a href="#cold" class="nav-btn">مشروبات باردة</a>
+      <a href="#sweets" class="nav-btn">حلويات</a>
+      <a href="#hot" class="nav-btn">مشروبات ساخنة</a>
+    </nav>
+
+    <div id="cold">
+      <h2 class="section-title">مشروبات باردة</h2>
+      <div class="menu-page">
+        <img src="cold-menu.png" alt="Cold Drinks Menu">
+      </div>
+    </div>
+
+    <div id="sweets">
+      <h2 class="section-title">حلويات</h2>
+      <div class="menu-page">
+        <img src="sweets-menu.png" alt="Sweets Menu">
+      </div>
+    </div>
+
+    <div id="hot">
+      <h2 class="section-title">مشروبات ساخنة</h2>
+      <div class="menu-page">
+        <img src="hot-menu.png" alt="Hot Drinks Menu">
+      </div>
+    </div>
+<div class="social-container">    <div class="social-flex">
+        
+        <a href="https://www.instagram.com/lava.cofe" target="_blank" class="social-item">
+            <img src="insta.png" alt="Instagram">
+        </a>
+
+        <a href="https://snapchat.com/t/jVF3k7Vo" target="_blank" class="social-item">
+            <img src="snap.png" alt="Snapchat">
+        </a>
+
+        <a href="https://www.tiktok.com/@lava.cofe" target="_blank" class="social-item">
+            <img src="tiktok.png" alt="TikTok">
+        </a>
+
+    </div>
+</div>
+    <footer>
+      <p>Lava Coffee &copy; 2026</p>
+      <p>Developed by <strong>spacenll</strong></p>
+    </footer>
+  </div>
+
+</body>
+</html>
